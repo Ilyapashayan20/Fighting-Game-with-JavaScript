@@ -2,7 +2,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1020
+canvas.width = 1024
 canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
@@ -16,6 +16,16 @@ const background = new Sprite({
     y:0
   },
   imgeSrc: 'https://raw.githubusercontent.com/chriscourses/fighting-game/main/img/background.png'
+})
+
+const shop = new Sprite({
+  position:{
+    x:680,
+    y:215
+  },
+  imgeSrc: 'https://github.com/chriscourses/fighting-game/blob/main/img/shop.png?raw=true',
+  scale: 2.1,
+  framesMax: 6,
 })
 
 const player = new Fighter({
@@ -73,6 +83,7 @@ function animate() {
   c.fillStyle = 'black'
   c.fillRect(0, 0, canvas.width, canvas.height)
   background.update()
+  shop.update()
   player.update()
   enemy.update()
 
