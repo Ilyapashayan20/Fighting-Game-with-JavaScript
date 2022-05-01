@@ -15,9 +15,11 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
     document.querySelector('#displayText').style.display = 'flex'
     if(player.health === enemy.health){
       document.querySelector('#displayText').innerHTML = 'Tie'
+
       
     } else if (player.health>enemy.health){
       document.querySelector('#displayText').innerHTML = 'Player 1 Win'
+      
     }
     else if (player.health<enemy.health){
       document.querySelector('#displayText').innerHTML = 'Player 2 Win'
@@ -38,3 +40,9 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
     determineWinner({player,enemy,timerId})
 }
   }
+
+ const playAgin = document.getElementById('playAgin')
+
+ playAgin.addEventListener('click', ()=>{
+  window.location.reload()
+ })
