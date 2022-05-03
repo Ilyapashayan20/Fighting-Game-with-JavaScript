@@ -46,11 +46,3 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
  playAgin.addEventListener('click', ()=>{
   window.location.reload()
  })
-
- window.addEventListener('keydown',(event)=>{
-   if(event.key === 'r'|| 'R'){
-    
-    window.location.reload()
-   }
-
- })
